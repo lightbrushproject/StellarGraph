@@ -1,0 +1,10 @@
+{
+  "id": "stellar-graph",
+  "name": "Stellar Graph",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Animated 3D graph view for Obsidian vaults used with agents, sources, briefs, and research notes.",
+  "author": "Lightbrush",
+  "authorUrl": "",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,27 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run validate
+      - run: ./scripts/prepare-dist.ps1
+        shell: pwsh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stellar-graph-dist
+          path: |
+            dist/stellar-graph/main.js
+            dist/stellar-graph/manifest.json
+            dist/stellar-graph/styles.css
+            dist/stellar-graph-0.1.0.zip

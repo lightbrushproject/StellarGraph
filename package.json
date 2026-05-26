@@ -1,0 +1,20 @@
+{
+  "name": "obsidian-stellar-graph",
+  "version": "0.1.0",
+  "description": "Animated 3D graph view for Obsidian vaults used with agents, sources, briefs, and research notes.",
+  "main": "main.js",
+  "scripts": {
+    "validate": "node --check main.js && node scripts/validate-manifest.js",
+    "prepare:dist": "powershell -ExecutionPolicy Bypass -File scripts/prepare-dist.ps1"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "knowledge-graph",
+    "agentic-research",
+    "graph-view"
+  ],
+  "author": "Lightbrush",
+  "license": "MIT",
+  "devDependencies": {}
+}

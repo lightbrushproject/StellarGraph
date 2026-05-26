@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run validate
+      - run: ./scripts/prepare-dist.ps1
+        shell: pwsh
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/stellar-graph/main.js
+            dist/stellar-graph/manifest.json
+            dist/stellar-graph/styles.css
+            dist/stellar-graph-*.zip

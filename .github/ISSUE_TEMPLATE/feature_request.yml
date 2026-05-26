@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest an improvement for Stellar Graph
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow would this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior, controls, or visual result you want.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Graph rendering
+        - Navigation
+        - Themes
+        - Agentic overlays
+        - Accessibility
+        - Performance
+        - Release/docs
+    validations:
+      required: true

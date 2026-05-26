@@ -1,0 +1,342 @@
+.stellar-graph-view .view-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.stellar-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  background: #030509;
+  color: #d8e7f2;
+  isolation: isolate;
+}
+
+.stellar-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.stellar-canvas:active {
+  cursor: grabbing;
+}
+
+.stellar-controls,
+.stellar-details,
+.stellar-node-list {
+  position: absolute;
+  z-index: 2;
+  border: 1px solid rgba(127, 215, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(5, 8, 13, 0.76);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+  color: #d8e7f2;
+  backdrop-filter: blur(14px);
+}
+
+.stellar-wizard {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: min(460px, calc(100% - 32px));
+  padding: 16px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 228, 119, 0.42);
+  border-radius: 8px;
+  background: rgba(5, 8, 13, 0.84);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  color: #eef8ff;
+  backdrop-filter: blur(16px);
+}
+
+.stellar-wizard.is-hidden {
+  display: none;
+}
+
+.stellar-wizard-title {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.stellar-wizard-line {
+  margin-top: 6px;
+  color: rgba(216, 231, 242, 0.76);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.stellar-wizard-files {
+  margin: 10px 0 0;
+  padding: 10px;
+  overflow: auto;
+  border: 1px solid rgba(255, 228, 119, 0.22);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.24);
+  color: #eef8ff;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.stellar-controls {
+  top: 14px;
+  left: 14px;
+  width: min(500px, calc(100% - 28px));
+  max-height: min(76vh, calc(100% - 28px));
+  padding: 14px;
+  overflow: auto;
+}
+
+.stellar-details {
+  right: 14px;
+  bottom: 14px;
+  width: min(390px, calc(100% - 28px));
+  max-height: 38%;
+  padding: 14px;
+  overflow: auto;
+}
+
+.stellar-node-list {
+  left: 14px;
+  bottom: 14px;
+  display: grid;
+  gap: 6px;
+  width: min(390px, calc(100% - 28px));
+  max-height: 34%;
+  padding: 12px;
+  overflow: auto;
+}
+
+.stellar-brand {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.stellar-stats,
+.stellar-detail-line,
+.stellar-list-type {
+  color: rgba(216, 231, 242, 0.72);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.stellar-search,
+.stellar-select,
+.stellar-budget-input,
+.stellar-button {
+  min-height: 36px;
+  border: 1px solid rgba(127, 215, 255, 0.22);
+  border-radius: 6px;
+  background: rgba(9, 14, 22, 0.82);
+  color: #eef8ff;
+  font-size: 14px;
+}
+
+.stellar-search {
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 11px;
+}
+
+.stellar-control-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.stellar-select,
+.stellar-budget-input,
+.stellar-button {
+  flex: 1 1 auto;
+  padding: 0 8px;
+}
+
+.stellar-budget-input {
+  min-width: 120px;
+}
+
+.stellar-budget-input:disabled {
+  opacity: 0.52;
+}
+
+.stellar-button {
+  cursor: pointer;
+}
+
+.stellar-slider {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
+  font-size: 14px;
+}
+
+.stellar-modal-preview {
+  max-height: 42vh;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+.stellar-detail-kicker,
+.stellar-badge {
+  color: #7fd7ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stellar-detail-title {
+  margin-top: 3px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.stellar-badge {
+  display: inline-block;
+  margin: 8px 6px 0 0;
+  padding: 4px 7px;
+  border: 1px solid rgba(127, 215, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(127, 215, 255, 0.1);
+}
+
+.stellar-list-item {
+  display: grid;
+  grid-template-columns: 14px 1fr auto;
+  gap: 9px;
+  align-items: center;
+  min-height: 36px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #eef8ff;
+  text-align: left;
+}
+
+.stellar-list-item:hover,
+.stellar-button:hover {
+  border-color: rgba(127, 215, 255, 0.45);
+  background: rgba(127, 215, 255, 0.12);
+}
+
+.stellar-search:focus-visible,
+.stellar-select:focus-visible,
+.stellar-budget-input:focus-visible,
+.stellar-button:focus-visible,
+.stellar-list-item:focus-visible,
+.stellar-canvas:focus-visible {
+  outline: 3px solid rgba(255, 228, 119, 0.92);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .stellar-controls,
+  .stellar-details,
+  .stellar-node-list {
+    right: 10px;
+    left: 10px;
+    width: auto;
+  }
+
+  .stellar-controls {
+    top: 10px;
+  }
+
+  .stellar-node-list {
+    display: none;
+  }
+
+  .stellar-details {
+    bottom: 10px;
+  }
+}
+
+.stellar-list-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.stellar-list-title {
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stellar-shell[data-stellar-theme="win31"] .stellar-controls,
+.stellar-shell[data-stellar-theme="win31"] .stellar-details,
+.stellar-shell[data-stellar-theme="win31"] .stellar-node-list,
+.stellar-shell[data-stellar-theme="win31"] .stellar-wizard {
+  border-color: #ffffff #404040 #404040 #ffffff;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000000;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.42);
+  backdrop-filter: none;
+}
+
+.stellar-shell[data-stellar-theme="win31"] .stellar-brand,
+.stellar-shell[data-stellar-theme="win31"] .stellar-detail-title,
+.stellar-shell[data-stellar-theme="win31"] .stellar-wizard-title,
+.stellar-shell[data-stellar-theme="win31"] .stellar-detail-kicker,
+.stellar-shell[data-stellar-theme="win31"] .stellar-badge {
+  color: #000080;
+}
+
+.stellar-shell[data-stellar-theme="win31"] .stellar-stats,
+.stellar-shell[data-stellar-theme="win31"] .stellar-detail-line,
+.stellar-shell[data-stellar-theme="win31"] .stellar-wizard-line,
+.stellar-shell[data-stellar-theme="win31"] .stellar-list-type {
+  color: #202020;
+}
+
+.stellar-shell[data-stellar-theme="win31"] .stellar-button,
+.stellar-shell[data-stellar-theme="win31"] .stellar-select,
+.stellar-shell[data-stellar-theme="win31"] .stellar-search,
+.stellar-shell[data-stellar-theme="win31"] .stellar-list-item {
+  border-color: #ffffff #404040 #404040 #ffffff;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000000;
+}
+
+.stellar-shell[data-stellar-theme="xp"] .stellar-controls,
+.stellar-shell[data-stellar-theme="xp"] .stellar-details,
+.stellar-shell[data-stellar-theme="xp"] .stellar-node-list,
+.stellar-shell[data-stellar-theme="xp"] .stellar-wizard {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: linear-gradient(180deg, rgba(37, 126, 232, 0.88), rgba(18, 72, 178, 0.82));
+  color: #ffffff;
+}
+
+.stellar-shell[data-stellar-theme="xp"] .stellar-search,
+.stellar-shell[data-stellar-theme="xp"] .stellar-select,
+.stellar-shell[data-stellar-theme="xp"] .stellar-button,
+.stellar-shell[data-stellar-theme="xp"] .stellar-list-item {
+  border-color: rgba(255, 255, 255, 0.58);
+  background: linear-gradient(180deg, #ffffff, #cfe4ff);
+  color: #173b83;
+}
+
+.stellar-shell[data-stellar-theme="pixelwave"] .stellar-controls,
+.stellar-shell[data-stellar-theme="pixelwave"] .stellar-details,
+.stellar-shell[data-stellar-theme="pixelwave"] .stellar-node-list,
+.stellar-shell[data-stellar-theme="pixelwave"] .stellar-wizard {
+  border-color: rgba(255, 79, 216, 0.48);
+  background: rgba(10, 6, 34, 0.78);
+  box-shadow: 0 0 22px rgba(255, 79, 216, 0.18), 0 0 34px rgba(53, 247, 255, 0.12);
+}

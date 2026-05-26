@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a Stellar Graph bug
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Stellar Graph version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: obsidian
+    attributes:
+      label: Obsidian version
+      placeholder: 1.12.7
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: Windows 11, macOS, Linux
+    validations:
+      required: true
+  - type: input
+    id: vault-size
+    attributes:
+      label: Vault size
+      placeholder: Approximate markdown note count and link count if known
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the theme, graph mode, render budget mode, and anything unusual about the vault.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
